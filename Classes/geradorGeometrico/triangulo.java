@@ -7,20 +7,20 @@ public class triangulo {
     
     public void gerador(int base){//ainda inacabado
         System.out.println();
-        int count = 0;
-        for(int i = 1; i <= base; i++){//gerador de linhas - espaços vazios
-                while (count < i) {
-                    System.out.print("* ");
-                    count++;
+        int astCounter = 0, vazioCounter = base;
+        for(int i = 1; i <= base; i++){
+            while (astCounter < i) {
+                while (vazioCounter > i) {
+                    System.out.print(" ");
+                    vazioCounter--;
                 }
-                count = base + 1;
-                while(count > i){
-                    System.out.print("! ");
-                    count--;
-                }
-                System.out.println();
-                count = 0;
-            }  
+                System.out.print( "* ");
+                astCounter++;
+            }
+            System.out.println("");
+            astCounter =  0;
+            vazioCounter = base;
+        }  
     }
 }    
     
