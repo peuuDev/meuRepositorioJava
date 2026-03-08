@@ -8,20 +8,19 @@ public class triangulo {
     public void gerador(int base){//ainda inacabado
         System.out.println();
         int count = 0;
-        for(int i = base; i >= 1; i--){//desenvolver triangulo completo**
-            while (count < i) {
-                System.out.print(" ");
-                count++;
-            }
-            count = 0;
-            for(int j = 1; j <= base; j++){
-                while (count < j) {
-                    System.out.print("*");
+        for(int i = 1; i <= base; i++){//gerador de linhas - espaços vazios
+                while (count < i) {
+                    System.out.print("* ");
                     count++;
                 }
-                count = 0;
+                count = base + 1;
+                while(count > i){
+                    System.out.print("! ");
+                    count--;
+                }
                 System.out.println();
-            }
-        }    
+                count = 0;
+            }  
     }
-}
+}    
+    
