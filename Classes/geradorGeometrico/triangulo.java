@@ -3,9 +3,8 @@ package Dev1.POO.Classes.geradorGeometrico;
 public class triangulo {
     
     int base;
-
     
-    public void gerador(int base){//ainda inacabado
+    public void gerador(int base){
         System.out.println();
         int astCounter = 0, vazioCounter = base;
         for(int i = 1; i <= base; i++){

@@ -6,8 +6,8 @@ public class principal {
     static ArrayList<String> formas = new ArrayList<>();
     
     public static void main(String[] args) {
-        quadrado qu = new quadrado(); triangulo tr = new triangulo(); Scanner sc = new Scanner(System.in); Collections.addAll(formas, "", "Quadrado", "Triângulo");
-        System.out.println("\nBem-Vindo ao Gerador Geométrico Java!\n\nEscolha uma figura geométrica:\n[1] Quadrado\n[2] Triângulo ");
+        quadrado qu = new quadrado(); triangulo tr = new triangulo();losango lo = new losango(); Scanner sc = new Scanner(System.in); Collections.addAll(formas, "", "Quadrado", "Triângulo", "Losango");
+        System.out.println("\nBem-Vindo ao Gerador Geométrico Java!\n\nEscolha uma figura geométrica:\n[1] Quadrado\n[2] Triângulo\n[3] Losango ");
         int fig = sc.nextInt();
         System.out.println("Escolha um valor para a base do " + formas.get(fig));
         int base = sc.nextInt();
@@ -17,6 +17,9 @@ public class principal {
                 break;
             case 2:
                 tr.gerador(base);
+                break;
+            case 3:
+                lo.gerador(base);
                 break;
             default:
                 break;
